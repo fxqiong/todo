@@ -130,7 +130,13 @@ $(function(){
 	
 	
 	
+//点击更多	
 	
+	var div=$("div .more")
+	div.on("touchstart",".yin",function(){
+		var index=$(this).index();
+		$(this).addClass("yin-d")
+	})
 	
 	
 	

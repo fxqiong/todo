@@ -44,6 +44,7 @@ $design-size: 750px;
         transform: translateX(120%);
     }
 }
+
 @each $w in $d-list{
     @media screen and (min-width:#{$w}){
         html{
@@ -65,6 +66,7 @@ $design-size: 750px;
     -moz-osx-font-smoothing: grayscale;
     padding-left: 10px;
     padding-right: 10px;
+    
     div{
         float: left;
         width: 33.333%;
@@ -304,16 +306,35 @@ $design-size: 750px;
         border-left: 1px solid #999;
     }
 }
-  
 
 
-#yin{
+@keyframes yin{
+    from{
+        bottom: -100%;
+    }
+    to{
+        bottom: 0;
+    }
+}  
+
+
+.yin{
+    width: 100%;
     color: #767676;
     padding-left: 40px;
+    position: fixed;
+    background: #fff;
+    left: 0;
+    bottom: -100%;
+    z-index: 100;
+    text-align: left;
+    font-size: 16px;
     li{
         height: 1.1rem;
         line-height: 1.1rem;
-//      background: #fff;
         border-bottom: 1px solid #f2f3f5;
     }
+}
+ul.yin-d{
+    animation: yin 2s both normal;
 }
