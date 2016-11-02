@@ -1,9 +1,23 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'iconfont';
+  src: url("../font/iconfont.eot");
+  src: url("../font/iconfont.eot?#iefix") format("embedded-opentype"), url("../font/iconfont.woff") format("woff"), url("../font/iconfont.ttf") format("truetype"), url("../font/iconfont.svg#iconfont") format("svg");
+}
+
 * {
   padding: 0;
   margin: 0;
   list-style: none;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border: none;
 }
 
 html {
@@ -13,22 +27,100 @@ html {
 body {
   font-size: 16px;
   color: #fff;
+  background: url(../img/back.jpg);
+}
+
+@keyframes delete {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(120%);
+  }
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 42.66667px;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 412px) {
+  html {
+    font-size: 54.93333px;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 55.2px;
+  }
+}
+
+/*顶子*/
+#ding {
+  height: 75px;
+  line-height: 75px;
+  background: #ff5151;
+  width: 100%;
+  font-family: "iconfont" !important;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#ding div {
+  float: left;
+  width: 33.333%;
+  text-align: center;
+  font-size: 1em;
+  color: #fff;
+}
+
+#ding div:nth-of-type(1) {
+  text-align: left;
+}
+
+#ding div:nth-of-type(2) {
+  font-size: 25px;
+}
+
+#ding div:nth-of-type(3) {
+  text-align: right;
 }
 
 /*时钟*/
 #box {
+  height: 200px;
   padding-top: 20px;
   padding-left: 20px;
 }
 
 #box .clock {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   border: 5px solid #fff;
   border-radius: 200px;
   background: -webkit-radial-gradient(center center, circle, #fff, #bbb);
-  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.8);
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.4);
 }
 
 #box .clock .clock-xin {
@@ -57,8 +149,8 @@ body {
 #box .clock .date {
   position: absolute;
   z-index: 3;
-  top: 125px;
-  left: 50px;
+  top: 100px;
+  left: 35px;
   font-size: 12px;
   color: #000;
   text-shadow: 1px 1px white;
@@ -69,7 +161,7 @@ body {
   z-index: 3;
   top: 50%;
   left: 50%;
-  width: 60px;
+  width: 50px;
   height: 6px;
   border-radius: 5px;
   background: #000;
@@ -82,7 +174,7 @@ body {
   z-index: 4;
   top: 50%;
   left: 50%;
-  width: 80px;
+  width: 70px;
   height: 4px;
   border-radius: 5px;
   background: #333;
@@ -95,7 +187,7 @@ body {
   z-index: 5;
   top: 50%;
   left: 50%;
-  width: 120px;
+  width: 110px;
   height: 2px;
   background: #f00;
   -webkit-transform-origin: 30px 50%;
@@ -121,10 +213,154 @@ body {
 }
 
 #box .clock em.ishour i {
-  font-size: 20px;
+  font-size: 18px;
   color: #000;
   position: absolute;
-  top: 10px;
-  left: -6px;
+  top: 7px;
+  left: -5px;
   text-shadow: 1px 1px white;
+}
+
+.header {
+  padding: 0.3rem;
+  position: relative;
+  border-bottom: 1px solid #FF0000;
+}
+
+.header input {
+  height: 1.0rem;
+  outline: none;
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  border: 0;
+  color: #CBCBCB;
+  padding-left: 0.3rem;
+  border-radius: 10px;
+}
+
+.header .add {
+  width: 0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0.5rem;
+  font-family: "iconfont" !important;
+  font-size: 24px;
+  color: red;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.todolist {
+  padding: 0.4rem;
+}
+
+.todolist li {
+  background: #FFFFFF;
+  line-height: 0.8rem;
+  height: 0.8rem;
+  position: relative;
+  margin-bottom: 0.2rem;
+  padding-left: 0.2rem;
+  font-size: 20px;
+}
+
+.todolist li .delete {
+  width: 0.3rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0.3rem;
+  display: none;
+  font-family: "iconfont" !important;
+  font-size: 20px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  color: #4D4D4D;
+}
+
+.todolist li .content {
+  float: left;
+  color: #000;
+}
+
+.todolist li.done .content {
+  text-decoration: line-through;
+  color: #BFBFBF;
+}
+
+.todolist li.done .delete {
+  display: block;
+}
+
+.all-clear {
+  width: 100%;
+  margin-top: 0.2rem;
+  height: 1rem;
+  text-align: center;
+  line-height: 1rem;
+}
+
+.all-clear a {
+  font-size: 1em;
+  color: #000000;
+  width: auto;
+  overflow: hidden;
+  height: auto;
+}
+
+#floor {
+  width: 100%;
+  height: 1rem;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-family: "iconfont" !important;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#floor div {
+  float: left;
+  width: 33.333%;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  font-size: 1em;
+  color: #999;
+}
+
+#floor .index {
+  color: red;
+}
+
+#floor .active {
+  border-right: 1px solid #999;
+  border-left: 1px solid #999;
+}
+
+#yin {
+  color: #767676;
+  padding-left: 40px;
+}
+
+#yin li {
+  height: 85px;
+  line-height: 85px;
+  border-bottom: 1px solid #f2f3f5;
 }
