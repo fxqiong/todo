@@ -71,8 +71,8 @@ body {
 
 /*顶子*/
 #ding {
-  height: 75px;
-  line-height: 75px;
+  height: 1rem;
+  line-height: 1rem;
   background: #ff5151;
   width: 100%;
   font-family: "iconfont" !important;
@@ -360,7 +360,7 @@ body {
 }
 
 #yin li {
-  height: 85px;
-  line-height: 85px;
+  height: 1.1rem;
+  line-height: 1.1rem;
   border-bottom: 1px solid #f2f3f5;
 }
