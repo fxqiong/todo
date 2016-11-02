@@ -132,13 +132,14 @@ $(function(){
 	
 //点击更多	
 	
-	var div=$("div .more")
-	div.on("touchstart",".yin",function(){
+	var div=$("#ding .more")
+	div.on("touchstart",function(){
 		var index=$(this).index();
-		$(this).addClass("yin-d")
+		$(this).find("ul").toggleClass("yin-d")
+//		console.log($(this))
 	})
 	
-	
+
 	
 })
 	
