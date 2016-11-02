@@ -1,0 +1,130 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100px;
+}
+
+body {
+  font-size: 16px;
+  color: #fff;
+}
+
+/*时钟*/
+#box {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+#box .clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 5px solid #fff;
+  border-radius: 200px;
+  background: -webkit-radial-gradient(center center, circle, #fff, #bbb);
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.8);
+}
+
+#box .clock .clock-xin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background: #eee;
+  margin: -15px 0 0 -15px;
+}
+
+#box .clock .clock-xin2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: #f00;
+  z-index: 100;
+  margin: -6px 0 0 -6px;
+}
+
+#box .clock .date {
+  position: absolute;
+  z-index: 3;
+  top: 125px;
+  left: 50px;
+  font-size: 12px;
+  color: #000;
+  text-shadow: 1px 1px white;
+}
+
+#box .clock .hour {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 6px;
+  border-radius: 5px;
+  background: #000;
+  -webkit-transform-origin: 10px 50%;
+  margin: -3px 0 0 -10px;
+}
+
+#box .clock .min {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 4px;
+  border-radius: 5px;
+  background: #333;
+  -webkit-transform-origin: 10px 50%;
+  margin: -2px 0 0 -10px;
+}
+
+#box .clock .sec {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 2px;
+  background: #f00;
+  -webkit-transform-origin: 30px 50%;
+  margin: -1px 0 0 -30px;
+}
+
+#box .clock em {
+  display: block;
+  width: 2px;
+  height: 5px;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: 50% 0;
+  margin-left: -1px;
+}
+
+#box .clock em.ishour {
+  width: 6px;
+  height: 10px;
+  margin-left: -3px;
+}
+
+#box .clock em.ishour i {
+  font-size: 20px;
+  color: #000;
+  position: absolute;
+  top: 10px;
+  left: -6px;
+  text-shadow: 1px 1px white;
+}
