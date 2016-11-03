@@ -133,13 +133,25 @@ $(function(){
 //点击更多	
 	
 	var div=$("#ding .more")
-	div.on("touchstart",function(){
+	div.on("touchstart",function(e){
 		var index=$(this).index();
-		$(this).find("ul").toggleClass("yin-d")
-//		console.log($(this))
+		var target = $(e.target);
+		if( target.is(".more") ) {
+			$(this).find("ul").toggleClass("yin-d")
+		}
 	})
 	
-
+//点击更多	
+	
+	var cang=$("#ding .list")
+	cang.on("touchstart",function(e){
+		var index=$(this).index();
+		var $target = $(e.target);
+		 if( $target.is(".list") ) {
+		 	$(this).find("ul").toggleClass("cang-d");
+		    }
+		
+	})
 	
 })
 	
